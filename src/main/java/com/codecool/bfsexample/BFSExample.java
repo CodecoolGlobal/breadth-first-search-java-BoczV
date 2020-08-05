@@ -7,13 +7,18 @@ import java.util.List;
 
 public class BFSExample {
 
-    private static void populateDB() {
 
+    private static void populateDB() {
         RandomDataGenerator generator = new RandomDataGenerator();
         List<UserNode> users = generator.generate();
 
         GraphPlotter graphPlotter = new GraphPlotter(users);
+        checkFirstFunctionality(users, generator);
 
+        System.out.println("Done!");
+    }
+
+    private static void checkFirstFunctionality(List<UserNode> users, RandomDataGenerator generator){
         BreadthFirstSearch breadthFirstSearch = new BreadthFirstSearch();
 
         UserNode userFrom = users.get(generator.randomGenNumber(users));
@@ -21,7 +26,6 @@ public class BFSExample {
         System.out.println("Minimum distance between " + userFrom.getFirstName() + " " + userFrom.getLastName() + "(" + userFrom.getId() + ")"
                 + " and " + userTo.getFirstName() + " " + userTo.getLastName() + "(" + userTo.getId() + ")" + " was: "
                 + breadthFirstSearch.returnMinimumDistance(userFrom, userTo));
-        System.out.println("Done!");
     }
 
     public static void main(String[] args) {
