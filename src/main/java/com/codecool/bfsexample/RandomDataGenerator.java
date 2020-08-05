@@ -56,4 +56,8 @@ class RandomDataGenerator {
     private String getRandomElement(String[] array) {
         return array[rng.nextInt(array.length)];
     }
+
+    public int randomGenNumber(List<UserNode> userNodeList){
+        return new Random().nextInt(userNodeList.size() - 1);
+    }
 }
