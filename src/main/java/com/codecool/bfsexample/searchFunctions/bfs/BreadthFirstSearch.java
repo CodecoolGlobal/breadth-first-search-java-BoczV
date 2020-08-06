@@ -31,7 +31,7 @@ public class BreadthFirstSearch {
     }
 
 
-    
+
 
     public Set<UserNode> returnFriendsOfFriendsAtALevel(UserNode userNode, int distance){
         return new HashSet<UserNode>();
