@@ -30,6 +30,9 @@ public class BreadthFirstSearch {
         return checkFriends(friendsOfFriends, userTo);
     }
 
+
+    
+
     public Set<UserNode> returnFriendsOfFriendsAtALevel(UserNode userNode, int distance){
         return new HashSet<UserNode>();
     }
